@@ -1,0 +1,40 @@
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: black;
+}
+
+#tablero{
+    width: 360px;
+    height: 360px;
+    border: 10px solid black;
+
+    /* centrar */
+    margin: 0 auto;
+
+    /* asegurar que los mosaicos se muevan de izquierda a derecha y llenar el ancho en lugar de apilar en una sola columna */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* ajustar el tamaño de las imagenes, el tablero es 3*3 y mide 360px, entonces 360px/3=120px */
+#tablero img{
+    width: 32.64%;
+    height: auto;
+    /* tomo 1 pixel entonces tengo que quitar dos de arriba para no alterar el tamaño */
+    border: 1px solid black;
+}
+
+#message {
+    display: none;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+    color: green;
+  }
+
+#referencia{
+    width: 360px;
+    height: 360px;
+}

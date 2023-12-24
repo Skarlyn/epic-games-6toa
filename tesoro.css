@@ -1,0 +1,197 @@
+/*+++++++++*/
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+img {
+  border: 3px solid #27ae60;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Agrega estas líneas para animaciones */
+.modal-container {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.modal-overlay.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+/*++++++++++*/
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #3498db; /* Cambia el color de fondo */
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.modal-container {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 0;
+}
+.modal-overlay.active .modal-container {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.05); /* Ajusta según sea necesario */
+}
+
+
+
+
+/*++++++++*/
+
+body {
+  background: linear-gradient(to right, #686663, #7fcad4); /* Gradiente naranja a rosa */
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 4em;
+  margin-bottom: 30px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+img#map {
+  border: 5px solid #ffeb3b; /* Cambia el color del borde a amarillo */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra suave */
+}
+
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #f39c12; /* Naranja brillante */
+  padding: 40px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+
+    /* Agrega estilos específicos para la presentación */
+    #intro {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, #3498db, #2c3e50);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    }
+
+    #intro.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #intro h2 {
+      font-size: 2em;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    #intro h1 {
+      font-size: 3em;
+      color: #fff;
+      margin-bottom: 20px;
+      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    #intro p {
+      font-size: 1.2em;
+      color: #fff;
+      margin-bottom: 30px;
+    }
+
+    #intro button {
+      font-size: 1.2em;
+      background: #27ae60;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease-in-out;
+    }
+
+    #intro button:hover {
+      background: #2ecc71;
+    }
+
+/*++++*/
+
+
+        /* ... (estilos existentes) ... */
+
+        #treasureContainer {
+          position: relative;
+          width: 400px; /* Ancho del mapa */
+          height: 400px; /* Altura del mapa */
+        }
+    
+        #treasure {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          cursor: pointer;
+        }

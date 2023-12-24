@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'SF Pixelate', sans-serif;
+}
+
+body{
+    background: rgb(65,8,179);
+    background: radial-gradient(circle, rgba(65,8,179,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+h1{
+    text-align: center;
+    font-size: 78px;
+    margin-bottom: 45px;
+    text-decoration: underline;
+    color: white;
+}
+.img-boa{
+    width: 220px;
+    height: 220px;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+    
+.img-boa:hover{
+    width: 240px;
+    height: 240px;
+}
+
+.img-mario{
+    width: 220px;
+    height: 220px;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+    
+.img-mario:hover{
+    width: 240px;
+    height: 240px;
+}
+
+.img-adivina{
+    width: 220px;
+    height: 220px;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.img-adivina:hover{
+    width: 240px;
+    height: 240px;
+}
+
+.img-memoria:hover{
+    width: 240px;
+    height: 240px;
+}
+
+.img-memoria{
+    width: 220px;
+    height: 220px;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.img-dinosaurio{
+    width: 220px;
+    height: 220px;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.img-dinosaurio:hover{
+    width: 240px;
+    height: 240px;
+}
+
+.img-laberinto{
+    width: 220px;
+    height: 220px;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.img-laberinto:hover{
+    width: 240px;
+    height: 240px;
+}
+
+.img-tres-raya{
+    width: 220px;
+    height: 220px;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.img-tres-raya:hover{
+    width: 240px;
+    height: 240px;
+}
+
+.img-adivina-pais{
+    width: 220px;
+    height: 220px;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.img-adivina-pais:hover{
+    width: 240px;
+    height: 240px;
+}
+
+.img-bandera{
+    width: 220px;
+    height: 220px;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.img-bandera:hover{
+    width: 240px;
+    height: 240px;
+}
+
+.img-tesoro{
+    width: 220px;
+    height: 220px;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.img-tesoro:hover{
+    width: 240px;
+    height: 240px;
+}
+
+.img-invasores{
+    width: 220px;
+    height: 220px;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.img-invasores:hover{
+    width: 240px;
+    height: 240px;
+}
+
+.img-tetris{
+    width: 220px;
+    height: 220px;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.img-tetris:hover{
+    width: 240px;
+    height: 240px;
+}
+
+.img-rompecabezas{
+    width: 220px;
+    height: 220px;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.img-rompecabezas:hover{
+    width: 240px;
+    height: 240px;
+}
+
+.par-boa{
+    font-size: 19px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.par-adivina{
+    font-size: 19px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.par-memoria{
+    font-size: 19px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.par-dinosaurio{
+    font-size: 19px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.par-laberinto{
+    font-size: 19px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.par-tres-raya{
+    font-size: 19px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.par-adivina-pais{
+    font-size: 19px;
+    font-weight: 600;
+    width: 244px;
+    text-align: center;
+}
+
+.par-bandera{
+    font-size: 19px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.par-tesoro{
+    font-size: 19px;
+    font-weight: 600;
+    width: 234px;
+    text-align: center;
+}
+
+.par-invasores{
+    font-size: 19px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.par-tetris{
+    font-size: 19px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.par-rompecabezas{
+    font-size: 19px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.par-mario{
+    font-size: 19px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.game{
+    margin: 21px;
+    width: 220px;
+    height: 220px;
+    display: inline-block;
+}
+p{
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+footer{
+    color: white;
+    margin-top: 30px;
+    text-align: center;
+    font-weight: 700;
+}

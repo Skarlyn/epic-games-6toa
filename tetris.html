@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo_tetris.png" type="image/x-icon">
+    <title>Tetris</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+    
+    <style>
+        body{
+            background-color: salmon;
+            margin: 0%;
+            padding: 0%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        canvas {
+            filter: drop-shadow(5px 5px 2px (0,0,0,0.4));
+        }
+    </style>
+    
+    <script src="Tablero.js"></script>
+    <script src="Tetrimino.js"></script>
+    <script>
+        const MARGEN_TABLERO = 10
+        let regulardor_velocidad_teclas = 0
+        let regulardor_de_caidad = 0
+        let lineas_hechas = 0
+
+        setInterval(() => {
+            if (millis()- regulardor_de_caidad < 300){
+
+                    return
+            }
+            regulardor_de_caidad = millis()
+            tetrimino.moverAbajo()
+        }, 500);
+
+        function setup(){
+            createCanvas(900,600)
+            tablero = new Tablero()
+            crearMapeoBaseTetriminos()
+            tetrimino = new Tetrimino()
+            resizeCanvas(
+                tablero.ancho + 2* MARGEN_TABLERO, 
+                tablero.alto + 2* MARGEN_TABLERO + tablero.lado_celda
+                )
+        }
+
+        function draw(){
+                clear()
+                dibujarPuntaje()
+                tablero.dibujar()
+                tetrimino.dibujar()
+                keyEventsTetris()
+        }
+
+        function dibujarPuntaje(){
+                push()
+                textSize(20)
+                strokeWeight(2)
+                stroke("black")
+                fill("white")
+                text(
+                    "Líneas:" + lineas_hechas, 
+                tablero.posicion.x, 
+                tablero.posicion.y - tablero.lado_celda / 2)
+                pop()
+        }
+
+        let limite_regulador_velocidad_teclas = 100
+        function keyEventsTetris(){
+            if(millis() - regulardor_velocidad_teclas < limite_regulador_velocidad_teclas){
+                    return
+            }
+            limite_regulador_velocidad_teclas = 100
+            regulardor_velocidad_teclas = millis()
+
+            if(keyIsDown(RIGHT_ARROW)){
+                tetrimino.moverDerecha()
+                regulardor_de_caidad = millis()
+            }
+            if(keyIsDown(LEFT_ARROW)){
+                tetrimino.moverIzquierda()
+                regulardor_de_caidad = millis()
+            }
+            if(keyIsDown(DOWN_ARROW)){
+                tetrimino.moverAbajo()
+                regulardor_de_caidad = millis()
+            }
+            if(keyIsDown(UP_ARROW)){
+                limite_regulador_velocidad_teclas = 150
+                tetrimino.girar()
+                regulardor_de_caidad = millis()
+            }
+            if(keyIsDown(32)){
+                limite_regulador_velocidad_teclas = 200
+                tetrimino.ponerEnElFondo()
+                regulardor_de_caidad = millis()
+            }
+        }
+        </script>
+        
+</body>
+</html>

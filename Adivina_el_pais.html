@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+  <!-- Ivan Rodriguez -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adivina el País</title>
+  <link rel="shortcut icon" href="logo_adivina_el_pais.png" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #game-container {
+      background-color: #34495e;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #3498db;
+    }
+
+    #question {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    #clue {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #95a5a6;
+    }
+
+    #answer {
+      padding: 10px;
+      font-size: 18px;
+      width: 200px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    #checkButton {
+      background-color: #3498db;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+
+    #result {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+
+    a button{
+      font-size: 25px;
+      font-weight: 800;
+      background-color: rgba(88, 244, 239, 0.329);
+      border-radius: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="game-container">
+  <h1>Adivina el País</h1>
+
+  <div id="question">¿En qué país estoy pensando?</div>
+  <div id="clue"></div>
+  <input type="text" id="answer" placeholder="Escribe tu respuesta">
+  <button id="checkButton" onclick="checkAnswer()">Verificar</button>
+
+  <div id="result"></div>
+
+  <a href="index.html">
+    <button>Salir</button>
+  </a>
+</div>
+
+<script>
+  var paises = [
+    { nombre: 'Brasil', pista: 'Pista: Tiene la selva amazónica y es conocido por el Carnaval de Río.' },
+    { nombre: 'Chile', pista: 'Pista: Se extiende a lo largo de la costa oeste de América del Sur.' },
+    { nombre: 'Colombia', pista: 'Pista: Conocido por su café y por la ciudad de Bogotá.' },
+    { nombre: 'México', pista: 'Pista: Hogar de la comida mexicana y de las antiguas civilizaciones azteca y maya.' },
+    { nombre: 'Perú', pista: 'Pista: Famoso por las líneas de Nazca y la ciudad de Machu Picchu.' },
+    { nombre: 'España', pista: 'Pista: País europeo con una rica historia y diversas culturas.' },
+    { nombre: 'Francia', pista: 'Pista: Conocido por su cocina gourmet y la Torre Eiffel.' },
+    { nombre: 'Italia', pista: 'Pista: Forma de bota en el sur de Europa y famosa por la pizza y la pasta.' },
+    { nombre: 'Alemania', pista: 'Pista: País en Europa conocido por su eficiencia y la Oktoberfest.' },
+    { nombre: 'Japón', pista: 'Pista: País insular en Asia conocido por la tecnología avanzada y el sushi.' },
+    { nombre: 'Australia', pista: 'Pista: País en Oceanía con la Gran Barrera de Coral y canguros.' },
+    { nombre: 'China', pista: 'Pista: País más poblado del mundo y famoso por la Gran Muralla.' },
+    { nombre: 'India', pista: 'Pista: Hogar de diversas culturas y famoso por el Taj Mahal.' },
+    { nombre: 'Egipto', pista: 'Pista: Famoso por las pirámides y el río Nilo.' },
+    { nombre: 'Canadá', pista: 'Pista: País norteamericano con vastos paisajes naturales y montañas.' },
+    { nombre: 'Rusia', pista: 'Pista: Extendiéndose por Europa y Asia, famoso por su historia y cultura.' },
+    { nombre: 'Sudáfrica', pista: 'Pista: País en el extremo sur de África, conocido por su diversidad cultural.' },
+    { nombre: 'Turquía', pista: 'Pista: Puente entre Europa y Asia con una rica herencia histórica.' },
+    { nombre: 'Corea del Sur', pista: 'Pista: País en la península de Corea, conocido por la tecnología y la cultura pop.' },
+    { nombre: 'Arabia Saudita', pista: 'Pista: País en la península arábiga, famoso por sus recursos petroleros.' },
+    { nombre: 'Nueva Zelanda', pista: 'Pista: País insular en Oceanía, conocido por sus impresionantes paisajes.' },
+    // Agrega más países con sus pistas aquí
+    { nombre: 'Nigeria', pista: 'Pista: País en África occidental, famoso por su diversidad étnica y recursos naturales.' },
+    { nombre: 'Noruega', pista: 'Pista: País escandinavo, conocido por sus fiordos y paisajes montañosos.' },
+    { nombre: 'Indonesia', pista: 'Pista: Archipiélago en el sudeste asiático, hogar de diversas culturas.' },
+    { nombre: 'Argentina', pista: 'Pista: Hogar del tango y famosa por los gauchos.' },
+    { nombre: 'Ecuador', pista: 'Pista: País en América del Sur, atravesado por la línea ecuatorial.' },
+    { nombre: 'Portugal', pista: 'Pista: País en el suroeste de Europa, conocido por su rica historia marítima.' },
+    { nombre: 'Marruecos', pista: 'Pista: País en el norte de África, con una mezcla única de influencias culturales.' },
+    { nombre: 'Vietnam', pista: 'Pista: País en el sudeste asiático, conocido por su historia y paisajes impresionantes.' },
+    { nombre: 'Suecia', pista: 'Pista: País escandinavo, famoso por su calidad de vida y hermosos bosques.' },
+    { nombre: 'Irlanda', pista: 'Pista: Isla en Europa, conocida por sus paisajes verdes y rica cultura.' },
+    { nombre: 'Grecia', pista: 'Pista: Cuna de la civilización occidental, con una historia rica y hermosas islas.' },
+    { nombre: 'Malasia', pista: 'Pista: País en el sudeste asiático, con una mezcla única de culturas.' },
+    { nombre: 'Suiza', pista: 'Pista: País en Europa central, famoso por sus Alpes y calidad de vida.' },
+    { nombre: 'Tailandia', pista: 'Pista: País en el sudeste asiático, conocido por su comida deliciosa y playas hermosas.' },
+    { nombre: 'Cuba', pista: 'Pista: Isla en el Caribe, famosa por su historia, cultura y playas.' },
+    { nombre: 'Finlandia', pista: 'Pista: País nórdico, conocido por su educación de alta calidad y diseño.' },
+    { nombre: 'Irán', pista: 'Pista: País en el Medio Oriente, con una historia antigua y una cultura rica.' },
+    { nombre: 'Estados Unidos', pista: 'Pista: Nación diversa en América del Norte con ciudades emblemáticas.' },
+    { nombre: 'Reino Unido', pista: 'Pista: Formado por cuatro países con una rica historia.' },
+    { nombre: 'República Dominicana', pista: 'Pista: País caribeño conocido por sus playas y resorts.' }
+  ];
+
+  var paisSeleccionado = obtenerNuevoPais();
+
+  document.getElementById('clue').innerHTML = paisSeleccionado.pista;
+
+  function checkAnswer() {
+    var respuestaUsuario = document.getElementById('answer').value.trim();
+
+    if (respuestaUsuario === '') {
+      alert('Por favor, ingresa tu respuesta.');
+      return;
+    }
+
+    if (respuestaUsuario.toLowerCase() === paisSeleccionado.nombre.toLowerCase()) {
+      document.getElementById('result').innerHTML = '¡Correcto! ¡Has adivinado el país: ' + paisSeleccionado.nombre + '!';
+      // Obtén un nuevo país después de adivinar correctamente
+      paisSeleccionado = obtenerNuevoPais();
+      document.getElementById('clue').innerHTML = paisSeleccionado.pista;
+      document.getElementById('answer').value = ''; // Limpia el campo de respuesta
+    } else {
+      document.getElementById('result').innerHTML = 'Incorrecto. Inténtalo de nuevo.';
+    }
+  }
+
+  function obtenerNuevoPais() {
+    return paises[Math.floor(Math.random() * paises.length)];
+  }
+</script>
+
+</body>
+</html>

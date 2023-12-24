@@ -1,0 +1,102 @@
+[
+    {
+        "categoria":"Artista",
+        "pregunta": "Adivina el Artista",
+        "respuesta": "Myke Towers",
+        "incorrecta1": "Bad Bunnny",
+        "incorrecta2": "Ozuna",
+        "incorrecta3": "Jay Wheeler",
+        "imagen": "https://static01.nyt.com/images/2023/03/28/multimedia/22MYKE-TOWERS-01-pcjl/22MYKE-TOWERS-01-pcjl-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
+        "object_fit": "cover"
+    },
+    {
+        "categoria":"Artista",
+        "pregunta": "Adivina el Artista",
+        "respuesta": "Ozuna",
+        "incorrecta1": "Bad Bunnny",
+        "incorrecta2": "Anuel AA",
+        "incorrecta3": "El Alfa",
+        "imagen": "https://labolacaliente.com/wp-content/uploads/2021/06/78315-ozuna-recibira-el-premio-especial-solidario-en-soberano-2021.jpg",
+        "object_fit": "cover"
+    },
+    {
+        "categoria":"Artista",
+        "pregunta": "Adivina el Artista",
+        "respuesta": "Anuel AA",
+        "incorrecta1": "Rochy RD",
+        "incorrecta2": "Donaty",
+        "incorrecta3": "Myke Towers",
+        "imagen": "https://ksdy50.com/wp-content/uploads/2023/05/channels4_profile.jpg",
+        "object_fit": "cover"
+    },
+    {
+        "categoria":"Artista",
+        "pregunta": "Adivina el Artista",
+        "respuesta": "Bad Bunny",
+        "incorrecta1": "Anuel AA",
+        "incorrecta2": "Camilo",
+        "incorrecta3": "El Alfa",
+        "imagen": "https://aws-modapedia.vogue.es/prod/designs/v1/assets/640x853/1945.jpg",
+        "object_fit": "cover"
+    },
+    {
+        "categoria":"Artista",
+        "pregunta": "Adivina el Artista",
+        "respuesta": "Melymel",
+        "incorrecta1": "La Insuperable",
+        "incorrecta2": "La Perversa",
+        "incorrecta3": "Jennifer López",
+        "imagen": "https://yt3.googleusercontent.com/ytc/APkrFKbYxLKW0Tv52fuNwDEXQcI2REtXtbG-PrHHEfaTXA=s900-c-k-c0x00ffffff-no-rj",
+        "object_fit": "cover"
+    },
+    {
+        "categoria":"Artista",
+        "pregunta": "Adivina el Artista",
+        "respuesta": "Ed Sheeran",
+        "incorrecta1": "El Alfa",
+        "incorrecta2": "Rochy RD",
+        "incorrecta3": "Romeo Santos",
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Ed_Sheeran-6886_%28cropped%29.jpg/1200px-Ed_Sheeran-6886_%28cropped%29.jpg",
+        "object_fit": "cover"
+    },
+    {
+        "categoria":"Artista",
+        "pregunta": "Adivina el Artista",
+        "respuesta": "Rochy RD",
+        "incorrecta1": "El Alfa",
+        "incorrecta2": "Jay Wheeler",
+        "incorrecta3": "Onguito Wa",
+        "imagen": "https://s.libertaddigital.com/2023/02/15/1920/1080/fit/rocky-rd-facebook-3-ok-140223.jpg",
+        "object_fit": "cover"
+    },
+    {
+        "categoria":"Artista",
+        "pregunta": "Adivina el Artista",
+        "respuesta": "Jay Wheeler",
+        "incorrecta1": "Anuel AA",
+        "incorrecta2": "Ozuna",
+        "incorrecta3": "Onguito Wa",
+        "imagen": "https://i.scdn.co/image/ab6761610000e5eb1c6f4471ff8e91660a7dc158",
+        "object_fit": "cover"
+    },
+    {
+        "categoria":"Artista",
+        "pregunta": "Adivina el Artista",
+        "respuesta": "Secreto el Famoso Biberon",
+        "incorrecta1": "Anuel AA",
+        "incorrecta2": "Peso Pluma",
+        "incorrecta3": "Onguito Wa",
+        "imagen": "https://www.maemusicgroup.com/wp-content/uploads/2020/09/SECRETO-2020.jpg",
+        "object_fit": "cover"
+    },
+    {
+        "categoria":"Artista",
+        "pregunta": "Adivina el Artista",
+        "respuesta": "Luh Kel",
+        "incorrecta1": "Ed Sheeran",
+        "incorrecta2": "Peso Pluma",
+        "incorrecta3": "Jay Wheeler",
+        "imagen": "https://townsquare.media/site/812/files/2019/11/luh_kel.jpg?w=980&q=75",
+        "object_fit": "cover"
+    }
+]

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Encuentra el Tesoro</title>
+  <link rel="stylesheet" href="tesoro.css">
+  <link rel="shortcut icon" href="alert_tesoro_img.jpg">
+</head>
+
+<body>
+
+
+
+  <div id="intro" class="active">
+    <h2>Bienvenido a</h2>
+    <h1>Encuentra el Tesoro</h1>
+    <img src="alert_tesoro_img.jpg" width="180" height="180" draggable="false">
+    <p>
+    <div>Indicaciones:</div>
+    ¡Haz clic en el mapa para descubrir dónde se esconde el tesoro!</p>
+    <button onclick="startGame()">Comenzar</button>
+  </div>
+  <h1>Encuentra el Tesoro</h1>
+  <img src="treasuremap.png" width="400" height="400" id="map" draggable="false">
+  <p id="distance"></p>
+  <script src="helper.js" charset="utf-8"></script>
+  <script src="game.js" charset="utf-8"></script>
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-container">
+      <h2>¡Felicidades!</h2>
+      <img src="cofre1.gif" width="100" height="100" draggable="false">
+      <p id="modalMessage"></p>
+      <button onclick="resetGame()">Jugar de nuevo</button>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

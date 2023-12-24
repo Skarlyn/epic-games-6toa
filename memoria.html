@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Memoria</title>
+    <link rel="stylesheet" href="memoria_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.cdnfonts.com/css/sf-pixelate" rel="stylesheet">
+    <link rel="shortcut icon" href="logo_memoria.png" type="image/x-icon">
+</head>
+<body>
+    
+    <div class="content-select">
+        
+        <select id="dificultad" onchange="cambiarDificultad()">
+            <option value="facil">Fácil</option>
+            <option value="normal" selected>Normal</option>
+            <option value="dificil">Difícil</option>
+            
+        </select>
+        <i></i>
+        
+    </div>
+    <div id="tablero"></div>
+    <br>
+    <div class="nuevoJuego" onclick="generarTablero()">
+        Nuevo Juego
+    </div>
+    <a href="index.html">
+        <div class="nuevoJuego" id="salir" >
+            Salir
+        </div>
+    </a>
+    
+   
+
+    <h2>Tiempo <span id="timer">0</span></h2>
+    <h2>Puntos <span id="puntos">0</span></h2>
+
+    <audio loop autoplay id="audio">
+        <source src="musica_fondo.mp3">
+    </audio>
+    <audio id="audio_derrota">
+        <source src="derrota.mp3">
+    </audio>
+    <audio id="audio_victoria">
+        <source src="victoria.mp3">
+    </audio>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.all.min.js"></script>
+    <script src="memoria_script.js"></script>
+</body>
+</html>

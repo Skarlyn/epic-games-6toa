@@ -1,0 +1,64 @@
+body{
+    background-color: slategray;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 25px;
+}
+
+.contenedor{
+    width: 98vw;
+    height: 98vh;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+}
+
+.encabezado{
+    background-color: white;
+    min-width: 300px;
+    max-width: 600px;
+    width: 50%;
+    padding: 10px;
+}
+.categoria, #puntuacion{
+    opacity: 0.3;
+    text-align: left;
+}
+.preguntas{
+    padding: 10px;
+}
+
+.imagen{
+    object-fit: cover;
+    height: 190px;
+    width: 100%;
+}
+
+.btn{
+    background-color: white;
+    width: 50%;
+    max-width: 550px;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+}
+
+.btn:hover{
+    background-color: orange;
+    cursor: pointer;
+
+}
+a button{
+    font-size: 25px;
+    font-weight: 800;
+    background-color: red;
+    width: 570px;
+    margin-top: 5px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="estilos_Invasores.css">
+		<link rel="shortcut icon" href="logo_invasores.png" type="image/x-icon">
+		<title>Invasores</title>
+		
+	</head>
+	<body id="particles-js">
+		
+		<video autoplay="autoplay" loop="loop" id="video_background" preload="auto" volume="50">
+  		<source src="fondo2.mp4" type="video/mp4" />
+		</video>
+		<h1>INVASORES</h1>
+		<canvas id="miCanvas" width="600px" height="430px">
+			Tu navegador no soporta CANVAS
+		</canvas>
+		<div class="botonesDiv">
+			<button class="botonesMover" onclick="verifica(true,37)">&lt;-</button>
+			<button class="botonDisparo" onclick="verifica(true,32)">Disparar</button>
+			<button class="botonesMover" onclick="verifica(true,39)">-&gt;</button>
+			<button class="botonReiniciar" onclick="reiniciar()">Jugar</button>
+			<a href="index.html"><button class="botonSalir">Salir</button></a>
+		</div>
+		<audio autoplay loop>
+			<source src="musicaFondo.mp3">
+		</audio>
+		<script src="funciones.js"></script>
+	</body>
+</html>
